@@ -1,14 +1,57 @@
-<html>
-   <head>
-    <div><title> ronak.com </title>
-    </div>
-   </head>
- <body>
-     <p> ronakgupta </p>
-    <div style="text-align: center;"><h1>hello, World</h1>
- <img src="IMG20251018171311.jpg"width="100%" height="100%">
- <img src="IMG20251018182219.jpg"width="100%" height="100%">
-<button>image switch</button>
-</div>
- </body>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Switcher</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin: 20px;
+            border: 2px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Image Switcher</h2>
+
+    <img id="img1" src="image1.jpg" alt="Image 1">
+    <img id="img2" src="image2.jpg" alt="Image 2">
+
+    <br>
+
+    <button onclick="switchImages()">Switch Images</button>
+
+    <script>
+        function switchImages() {
+            // दोनों इमेजेस को उनके ID से पकड़ा
+            var firstImage = document.getElementById('img1');
+            var secondImage = document.getElementById('img2');
+
+            // उनके 'src' (रास्ते) को आपस में बदल दिया
+            var tempSrc = firstImage.src;
+            firstImage.src = secondImage.src;
+            secondImage.src = tempSrc;
+        }
+    </script>
+
+</body>
 </html>
